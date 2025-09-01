@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ai
+
+  ai:
+    vertex:
+      ai:
+        gemini:
+          project-id: ai-project-470709
+          location: us-central1
+          chat:
+            options:
+              model: gemini-2.0-flash
