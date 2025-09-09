@@ -23,7 +23,9 @@ extra["springAiVersion"] = "1.0.1"
 dependencies {
     implementation("org.springframework.ai:spring-ai-starter-model-vertex-ai-gemini")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
