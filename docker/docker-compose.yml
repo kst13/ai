@@ -9,6 +9,16 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
+  blackbox-exporter:
+    image: prom/blackbox-exporter
+    container_name: blackbox-exporter
+    ports:
+      - "9115:9115"
+    volumes:
+      - ./blackbox.yml:/etc/blackbox_exporter/config.yml:ro
+    command:
+      - --config.file=/etc/blackbox_exporter/config.yml
+
   grafana:
     image: grafana/grafana
     container_name: grafana

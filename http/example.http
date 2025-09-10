@@ -4,3 +4,6 @@ GET https://examples.http-client.intellij.net/get
 
 ###
 GET http://localhost:8080/ai/generate?message=한국어 좀 하나요?
+
+###
+GET http://localhost:8080/test/text

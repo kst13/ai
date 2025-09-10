@@ -51,6 +51,29 @@ curl http://localhost:8080/actuator/prometheus
 curl http://localhost:8080/actuator/info
 ```
 
+### Docker 기반 모니터링 스택
+Prometheus, Blackbox Exporter, Grafana를 포함한 모니터링 스택:
+```bash
+# Docker Compose로 모니터링 스택 실행
+cd docker
+docker-compose up -d
+
+# 서비스 확인
+docker-compose ps
+
+# 로그 확인
+docker-compose logs blackbox-exporter
+docker-compose logs prometheus
+
+# 정리
+docker-compose down
+```
+
+**접근 URL**:
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:3000 (admin/admin)
+- Blackbox Exporter: http://localhost:9115
+
 ## 아키텍처 개요
 
 이것은 포괄적인 모니터링과 관측성을 갖춘 AI 채팅 기능을 위해 **Google Vertex AI Gemini**와 통합된 **Spring Boot 3.5.5** 애플리케이션입니다.
